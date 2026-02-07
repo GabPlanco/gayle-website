@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Valentine's Day</title>
   <style>
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fff;
+      background: linear-gradient(to bottom, #ffcccc, #ffe6e6, #fff); /* soft pink gradient */
       color: #b30000; /* deep red */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* full screen height */
       text-align: center;
     }
-    header {
-      padding: 60px 20px;
-      background-color: #b30000;
-      color: #fff;
-    }
     header h1 {
-      font-size: 3em;
+      font-size: 4em;
       margin: 0;
-    }
-    .content {
-      padding: 40px 20px;
+      color: #b30000;
+      text-transform: uppercase;
     }
     .content h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 3em;
+      margin: 20px 0;
+      color: #ff6699; /* pink accent */
     }
-    .heart {
-      font-size: 5em;
+    .content p {
+      font-size: 2em;
       color: #b30000;
+      margin-bottom: 30px;
+    }
+    .heart-btn {
+      font-size: 5em;
+      background: linear-gradient(135deg, #b30000, #ff6699);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
       animation: pulse 1.5s infinite;
     }
+
+  .heart-btn:focus,
+  .heart-btn:active {
+    outline: none;   /* removes the outline box */
+    box-shadow: none; /* removes any glow/shadow highlight */
+  }
+
+
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
     }
     footer {
-      padding: 20px;
-      background-color: #f2f2f2;
-      color: #b30000;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
       font-size: 0.9em;
+      color: #b30000;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Happy Valentine's Day ❤️</h1>
+    <h1>Happy Valentine's Day Gayle ❤️</h1>
   </header>
 
   <div class="content">
-    <h2>Minimal Love, Maximum Meaning</h2>
-    <p>Celebrate love with simplicity and elegance.</p>
-    <div class="heart">♥</div>
+    <h2>Per aspera ad astra</h2>
+    <p>Look Back Our Memories! Click The Heart</p>
+    <button class="heart-btn" onclick="window.location.href='index2.html'">♥</button>
+
   </div>
 
   <footer>
-    Made with ❤️ by Gabriel
+    By Gabo hehehe
   </footer>
 </body>
 </html>
+
